@@ -82,7 +82,7 @@ class Producto
     public function Listar()
     {
         $sql = "SELECT * FROM productos";
-        
+         
         if(!$result = $this->conn->query($sql))
         {
             echo "Error Consulta. " . mysqli_error($this->conn);
@@ -91,4 +91,12 @@ class Producto
         return $result;
         mysqli_close($this->conn);
     }
+
+   
+
+
+
+
+
 }
+
