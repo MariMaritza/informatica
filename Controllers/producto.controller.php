@@ -1,6 +1,10 @@
 <?php
 
-require ''
+require '../Models/producto.models.php';
+
+// instanciar a la clase
+$registro = new Registro();
+
 $producto = $_POST['pro_nom'];
 $marca = $_POST['pro_mar'];
 $costo = $_POST['pro_cos'];
@@ -15,4 +19,5 @@ echo $precio;
 echo $cantidad;
 echo $imagen;
 
-
+$registro->Registrar($producto, $marca, $costo, 
+	$precio,$cantidad,$imagen);
